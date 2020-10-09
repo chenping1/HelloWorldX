@@ -419,6 +419,9 @@ MVVM: DataBinding
 ### rxjava
 RXJava 常用的操作符
 
+#### 用线程池线程数量 经验值是这样
+程池的大小经验值应该这样设置：（其中N为CPU的核数）如果是CPU密集型应用，则线程池大小设置为N+1
+如果是IO密集型应用，则线程池大小设置为2N+1
 
 
 https://github.com/leavesC/ReactiveHttp
