@@ -1,4 +1,4 @@
-package com.taj.helloworldx.ui.main;
+package com.cp.helloworldx.android.architect;
 
 import androidx.lifecycle.ViewModelProviders;
 
@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.taj.helloworldx.R;
+import com.cp.helloworldx.R;
 
 public class MainFragment extends Fragment {
 

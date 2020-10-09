@@ -1,4 +1,4 @@
-package com.taj.helloworldx.ui.main;
+package com.cp.helloworldx.android.architect;
 
 import androidx.lifecycle.ViewModel;
 

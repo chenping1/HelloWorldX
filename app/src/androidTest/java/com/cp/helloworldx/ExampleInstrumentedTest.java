@@ -1,9 +1,13 @@
-package com.taj.helloworldx;
+package com.cp.helloworldx;
 
 import android.content.Context;
+import android.os.Looper;
+import android.widget.Toast;
 
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+
+import com.cp.helloworldx.android.architect.network.retrofit.LogUtil;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,5 +27,11 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
         assertEquals("com.taj.helloworldx", appContext.getPackageName());
+    }
+
+    @Test
+    public void test(){
+        int a = 1;
+        System.out.println("获取到人脸：" + ++a);
     }
 }

@@ -1,4 +1,4 @@
-package com.taj.helloworldx;
+package com.cp.helloworldx;
 
 import org.junit.Test;
 

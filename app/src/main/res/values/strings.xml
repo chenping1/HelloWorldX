@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HelloWorldX</string>
+    <string name="http_error">网络错误</string>
 </resources>

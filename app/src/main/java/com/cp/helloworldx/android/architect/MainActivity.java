@@ -1,10 +1,10 @@
-package com.taj.helloworldx;
+package com.cp.helloworldx.android.architect;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.taj.helloworldx.ui.main.MainFragment;
+import com.cp.helloworldx.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,5 +17,7 @@ public class MainActivity extends AppCompatActivity {
                     .replace(R.id.container, MainFragment.newInstance())
                     .commitNow();
         }
+
+//        new WorkManagerX(this,null);
     }
 }
