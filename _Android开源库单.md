@@ -1,5 +1,5 @@
 ###
-*   [dryrun](https://github.com/cesarferreira/dryrun)  无需下载 直接运行github 项目到手机
+
 
 ### 一 、基本控件
 
@@ -135,7 +135,7 @@
 *   [LayoutManagerGroup](https://github.com/DingMouRen/LayoutManagerGroup) 自定义RecyclerView 的LayoutManager实现几种炫酷的效果。
 *   [android-advancedrecyclerview](https://github.com/h6ah4i/android-advancedrecyclerview) 自定义RecyclerView （2019-03-29）
 *   [RecyclerView-FlexibleDivider](https://github.com/yqritc/RecyclerView-FlexibleDivider) RecyclerView各种间隔线 （2019-04-02）
-*   [PathLayoutManager](https://github.com/wuyr/PathLayoutManager)RecyclerView的LayoutManager，轻松实现各种炫酷、特殊效果（2019-06-24）
+*   [PathLayoutManager](https://github.com/wuyr/PathLayoutManager) RecyclerView的LayoutManager，轻松实现各种炫酷、特殊效果（2019-06-24）
 *   [MultiType](https://github.com/drakeet/MultiType) 多类型adapter （2019-06-24）
 
 ##### 日历、时钟
@@ -194,11 +194,11 @@
 *   [AndroidPicker](https://github.com/gzu-liyujiang/AndroidPicker)
 *   [HorizontalWheelView](https://github.com/shchurov/HorizontalWheelView) 水平的wheelview
 *   [WheelView-Android](https://github.com/lantouzi/WheelView-Android) 带刻度的wheelview
-*   [citypicker](https://github.com/crazyandcoder/citypicker)citypicker城市选择器，详细的省市区地址信息，支持仿iOS滚轮实现，仿京东样式，一级或者三级列表展示方式。（2019-06-24）
+*   [citypicker](https://github.com/crazyandcoder/citypicker) citypicker城市选择器，详细的省市区地址信息，支持仿iOS滚轮实现，仿京东样式，一级或者三级列表展示方式。（2019-06-24）
 
 ##### Tab
 
-*   [BottomBar](https://github.com/roughike/BottomBar) 一个Material Design风格的底部导航的Android视图组件
+*   [BottomBar](https://github.com/roughike/BottomBar) Deprecated 一个Material Design风格的底部导航的Android视图组件
 *   [NavigationTabBar](https://github.com/Devlight/NavigationTabBar) 一个具有丰富的动画效果的Android导航Tab工具栏组件。
 *   [ahbottomnavigation](https://github.com/aurelhubert/ahbottomnavigation) material风格的底部导航
 *   [Material-BottomNavigation](https://github.com/sephiroth74/Material-BottomNavigation)
@@ -219,6 +219,7 @@
 *   [Fast-Android-Networking](https://github.com/amitshekhariitbhu/Fast-Android-Networking) 支持http2的网络库（2019-03-29）
 *   [RxEasyHttp](https://github.com/zhou-you/RxEasyHttp) 基于RxJava2+Retrofit2实现简单易用的网络请求框架，已经能满足现在的大部分网络请求。（2019-06-24）
 *   [RxHttp](https://github.com/liujingxing/okhttp-RxHttp) 30秒上手，支持协程、RxJava2、RxJava3，史上最优雅的实现文件上传/下载/进度监听、动态/多域名、缓存；支持第三方数据解析工具、自定义请求、自动关闭请求等等 （2020-04-22）
+*   [RetrofitUrlManager](https://github.com/JessYanCoding/RetrofitUrlManager) 以最简洁的 Api 让 Retrofit 同时支持多个 BaseUrl 以及动态改变 BaseUrl
 
 ##### json
 
@@ -253,12 +254,19 @@
 *   [SpringView](https://github.com/liaoinstan/SpringView)
 *   [Phoenix](https://github.com/Yalantis/Phoenix)
 *   [TwinklingRefreshLayout](https://github.com/lcodecorex/TwinklingRefreshLayout)支持下拉刷新和上拉加载的RefreshLayout,自带越界回弹效果，支持RecyclerView,AbsListView,ScrollView,WebView（2019-06-24）
+*   [×BGARefreshLayout-Android](https://github.com/bingoogolapple/BGARefreshLayout-Android) 开发者使用 BGARefreshLayout-Android 可以对各种控件实现多种下拉刷新效果、上拉加载更多以及配置自定义头部广告位
 
 ##### 轮播图
 
 *   [banner](https://github.com/youth5201314/banner)
 *   [Android-ConvenientBanner](https://github.com/Bigkoo/Android-ConvenientBanner)
 *   [MZBannerView](https://github.com/pinguo-zhouwei/MZBannerView) 仿魅族BannerView,图片轮播控件,支持多种模式切换
+*   [BGABanner-Android](https://github.com/bingoogolapple/BGABanner-Android) 引导界面滑动导航 + 大于等于1页时无限轮播 + 各种切换动画轮播效果
+
+
+#### 加载 空数据
+*   [LoadSir](https://github.com/KingJA/LoadSir) 如加载中，加载失败，无数据，网络超时，如占位图，登录失效等常用页面
+*   [ LoadingAndRetryManager]( https://github.com/hongyangAndroid/LoadingAndRetryManager) 如加载中，加载失败，无数据，网络超时，如占位图，登录失效等常用页面
 
 ##### 新手引导
 
@@ -310,7 +318,7 @@
 *   [FlowLayout](https://github.com/hongyangAndroid/FlowLayout) Android流式布局，支持单选、多选等，适合用于产品标签等。
 *   [MaterialDesignLibrary](https://github.com/navasmdc/MaterialDesignLibrary) 包含android l组件的库，供您在低版本中使用。
 *   [material](https://github.com/rey5137/material) 包含android l组件的库，供您在低版本中使用。
-*   [QMUI_Android](https://github.com/Tencent/QMUI_Android) 快速搭建一个具备基本设计还原效果的 Android 项目
+
 *   [Android-Bootstrap](https://github.com/Bearded-Hen/Android-Bootstrap) Android 上的bootstrap 效果
 *   [ScalingLayout](https://github.com/iammert/ScalingLayout) 缩放布局
 *   [android-ConstraintLayoutExamples](https://github.com/googlesamples/android-ConstraintLayoutExamples) ConstraintLayout 布局的官方demo （2019-03-27）
@@ -318,6 +326,12 @@
 *   [material-ripple](https://github.com/balysv/material-ripple) 水波纹效果（2019-04-02）
 *   [AndroidPileLayout](https://github.com/xmuSistone/AndroidPileLayout) 卡片式布局（2019-06-24）
 *   [ChatKit](https://github.com/stfalcon-studio/ChatKit) 聊天布局 （2019-06-24）
+
+### 整套UI 方案
+*   [XUI](https://github.com/xuexiangjys/XUI) 一整套UI的整体解决方案
+*   [QMUI_Android](https://github.com/Tencent/QMUI_Android) 快速搭建一个具备基本设计还原效果的 Android 项目
+*   [MagicaSakura](https://github.com/bilibili/MagicaSakura) bilibili 出的Android 多主题框架
+*   [SketchyComponent](https://github.com/m-zylab/SketchyComponent) 手绘风格 的 Android 组件库
 
 ##### 指示器
 
@@ -358,6 +372,7 @@
 
 *   [JustWeTools](https://github.com/lfkdsk/JustWeTools)
 
+
 ##### 其他
 
 *   [SeatTable](https://github.com/qifengdeqingchen/SeatTable) 电影选座效果
@@ -380,6 +395,10 @@
 *   [BlurView](https://github.com/Dimezis/BlurView) 简单易用的模糊效果（2019-06-24）
 *   [MarqueeViewLibrary](https://github.com/gongwen/MarqueeViewLibrary) 一个帮您快速实现跑马灯效果的library（2019-06-24）
 *   [ZoomHeader](https://github.com/githubwing/ZoomHeader) 模仿饿了么详情页可以跟随手指移动 viewpager变详情页（2019-06-24）
+*   [AppBadge](https://github.com/jimmysuncpt/AppBadge) 史上最全Android应用角标适配方法
+
+
+
 
 ### 四、图片、音视频
 
@@ -432,6 +451,7 @@
 *   [NiceVieoPlayer](https://github.com/xiaoyanger0825/NiceVieoPlayer) 支持列表，完美切换全屏、小窗口的Android视频播放器（2019-03-27）
 *   [MusicDNA](https://github.com/harjot-oberai/MusicDNA) 一个漂亮的音乐播放器（2019-04-02）
 *   [Phonograph](https://github.com/kabouzeid/Phonograph) material风格的音乐播放器 （2019-04-02）
+*   [AndroidInstantVideo](https://github.com/ChillingVan/AndroidInstantVideo) 展现Android硬编码下的视频数据流动，可以对视频做处理，例如加滤镜，加水印等，做直播推流（用RTMP）
 
 ##### 图片压缩
 
@@ -457,6 +477,7 @@
 *   [JJSearchViewAnim](https://github.com/android-cjj/JJSearchViewAnim) 搜索栏动画（2019-06-24）
 *   [Flourish](https://github.com/skydoves/Flourish) 过渡动画（2020-04-30）
 *   [EasyReveal](https://github.com/Chrisvin/EasyReveal) 过渡动画（2020-04-30）
+*   [spruce-android](https://github.com/willowtreeapps/spruce-android) 列表视图展现动画
 
 ##### 权限
 
@@ -490,6 +511,13 @@
 *   [wcdb](https://github.com/Tencent/wcdb) 一个高效、完整、易用的移动数据库框架，基于[SQLCipher](https://github.com/sqlcipher/sqlcipher)，支持iOS, macOS和Android。
 *   [Android-Debug-Database](https://github.com/amitshekhariitbhu/Android-Debug-Database) 数据库调试工具
 
+
+
+#### 通讯
+*   [NettyChat](https://github.com/FreddyChen/NettyChat) 基于Netty+TCP+Protobuf实现的Android IM库，包含Protobuf序列化、TCP拆包与粘包、长连接握手认证、心跳机制、断线重连机制、消息重发机制、读写超时机制、离线消息、线程池等功能。
+*   [NettyDemo](https://github.com/aLittleGreens/NettyDemo) Netty应用到Android，包含客户端、服务端（断线重连、心跳、黏包处理）
+*   [mars](https://github.com/Tencent/mars)   Mars是腾讯的一款开源框架，主要用于网络请求中的长连接，短连接，是基于 socket 层的解决方案，在网络调优方面有更好的可控性，暂不支持HTTP协议
+
 ##### 手势关闭
 
 *   [SwipeBackLayout](https://github.com/ikew0ng/SwipeBackLayout)
@@ -503,6 +531,7 @@
 *   [otto](https://github.com/square/otto)
 *   [EventBus](https://github.com/greenrobot/EventBus)
 *   [AndroidEventBus](https://github.com/hehonghui/AndroidEventBus)
+*   [LiveEventBus](https://github.com/JeremyLiao/LiveEventBus) 基于LiveData，具有生命周期感知能力，支持Sticky，支持AndroidX，支持跨进程，支持跨APP
 
 ##### 换肤
 
@@ -530,6 +559,10 @@
 *   [butterknife](https://github.com/JakeWharton/butterknife) 利用 annotation 帮你快速完成 View 的初始化，减少代码
 *   [parceler](https://github.com/johncarl81/parceler) 序列化（2019-03-29）
 *   [tray](https://github.com/grandcentrix/tray) 替代SharedPreferences （2019-04-02）
+*   [*MMKV](https://github.com/Tencent/MMKV) 替代SharedPreferences  腾讯出品
+*   [CommonUtilLibrary](https://github.com/AbrahamCaiJin/CommonUtilLibrary) 工具类集合库 
+
+*   [flatbuffers](https://github.com/google/flatbuffers) google 序列化
 
 ##### 热修复
 
@@ -537,7 +570,8 @@
 *   [Nuwa](https://github.com/jasonross/Nuwa)
 *   [AndFix](https://github.com/alibaba/AndFix) 阿里的方案
 *   [VirtualXposed](https://github.com/android-hacker/VirtualXposed)
-*   [ROBUST]()
+*   [ROBUST](https://github.com/Meituan-Dianping/Robust)  美团热更新
+
 ##### 插件化
 
 *   [RePlugin](https://github.com/Qihoo360/RePlugin) RePlugin是一套完整的、稳定的、适合全面使用的，占坑类插件化方案，由360手机卫士的RePlugin Team研发，也是业内首个提出”全面插件化“（全面特性、全面兼容、全面使用）的方案。（2019-03-27）
@@ -547,7 +581,7 @@
 
 *   [walle](https://github.com/Meituan-Dianping/walle) Android Signature V2 Scheme签名下的新一代渠道包打包神器
 *   [packer-ng-plugin](https://github.com/mcxiaoke/packer-ng-plugin) 100个渠道包只需要10秒钟
-
+*   [YCWalleHelper](https://github.com/yangchong211/YCWalleHelper)  自动化瓦力多渠道打包python脚本
 ##### 反编译
 
 *   [Apktool](https://github.com/iBotPeaches/Apktool) 反编译工具
@@ -566,9 +600,14 @@
 *   [ARouter](https://github.com/alibaba/ARouter) 帮助 Android App 进行组件化改造的路由框架
 *   [DeepLinkDispatch](https://github.com/airbnb/DeepLinkDispatch) （2019-03-29）
 
-##### 内存泄漏检测
+##### 内存泄漏 检测优化
 
 *   [leakcanary](https://github.com/square/leakcanary)
+*   [toolargetool](https://github.com/guardian/toolargetool) 检测intent 传输数据太大
+*   [matrix](https://github.com/Tencent/matrix) 腾讯出品 性能检测
+*   [hugo](https://github.com/JakeWharton/hugo) 函数耗时检测
+*   [AndroidScreenShot_SysApi](https://github.com/BruceWind/AndroidScreenShot_SysApi) 优雅地实现屏幕截图，用android 5.0之后的录屏API实现
+
 
 ##### 布局优化
 
@@ -632,12 +671,13 @@
 *   [LookLook](https://github.com/xinghongfei/LookLook) 完整的资讯类App（2019-04-02）
 *   [MinimalistWeather](https://github.com/BaronZ88/MinimalistWeather) 完整的天气类App （2019-04-02）
 *   [remusic](https://github.com/aa112901/remusic) 仿网易云音乐 安卓版，netease android，音乐播放器 在线 下载（2019-06-24）
-
+*   [JetPack郭霖:](https://github.com/guolindev/coolweatherjetpack) 使用了 jetpack + kotlin 构建
 ##### 其他
 
 *   [WeChatLuckyMoney](https://github.com/geeeeeeeeek/WeChatLuckyMoney) 微信抢红包插件
 *   [BookReader](https://github.com/smuyyh/BookReader) 完整的小说阅读器
 *   [CloudReader](https://github.com/youlookwhat/CloudReader) 小说阅读器
+*   [reader-api](https://github.com/yuenov/reader-api) 小说阅读器
 *   [Android-Iconics](https://github.com/mikepenz/Android-Iconics) 图标
 *   [AndroidPdfViewer](https://github.com/barteksc/AndroidPdfViewer) pdf 加载
 *   [android-job](https://github.com/evernote/android-job) 用于后台运行延迟的作业
@@ -645,4 +685,15 @@
 *   [k-9](https://github.com/k9mail/k-9) 邮箱（2019-03-29）
 *   [FloatWindow](https://github.com/yhaolpz/FloatWindow) 全局悬浮窗，只是好久没有更新了（2019-04-18）
 *   [PreLoader](https://github.com/luckybilly/PreLoader)预加载：页面启动速度优化利器（2019-06-24）
-*   [JetPack郭霖:](https://github.com/guolindev/coolweatherjetpack) 使用了 jetpack + kotlin 构建
+
+*   [AndroidQuick](https://github.com/ddnosh/AndroidQuick)  快速开发框架 覆盖了开发一个APP所用到的常用的架构、模块、功能、技术点等
+*   [Folivora](https://github.com/Cricin/Folivora) Folivora可以为你的View设置一个背景或者ImageView的src,当前支持的drawable类型有
+### 第三方
+*   [美国云主机](https://cn.hostease.com/) 云主机
+*   [生成样机工具](https://www.uisdc.com/mokupframes) 生成样机工具
+
+*   [dryrun](https://github.com/cesarferreira/dryrun)  无需下载 直接运行github 项目到手机
+
+
+### 组件
+*   [slidebarlistview](https://github.com/encyclist/slidebarlistview) 侧边拼音栏
