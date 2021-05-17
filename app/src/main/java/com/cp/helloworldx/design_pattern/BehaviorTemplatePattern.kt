@@ -7,7 +7,7 @@ import android.widget.TextView
  * 在一个方法中定义一个算法的骨架，而将一些步骤的实现延迟到子类中，使得子类可以在不改变一个算法的结构前提下即可重定义该算法的某些特定步骤
  * 1.基类定义一套流程框架  2.子类继承实现 (比如现在BaseActivity receiveData initData intView)
  */
-public class BehaviourTemplatePattern {
+public class BehaviorTemplatePattern {
 
     /**
      * 场景: 切换直播平台

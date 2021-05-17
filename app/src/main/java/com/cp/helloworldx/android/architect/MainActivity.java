@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
                     .commitNow();
         }
 
+        LifecycleObserverX observerX = new LifecycleObserverX();
+
+        getLifecycle().addObserver(observerX);
 //        new WorkManagerX(this,null);
     }
 }

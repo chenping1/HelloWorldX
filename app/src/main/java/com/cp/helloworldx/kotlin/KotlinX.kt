@@ -1,5 +1,8 @@
 package com.cp.helloworldx.kotlin
 
+import android.content.Context
+import android.widget.Toast
+
 class KotlinX {
     //延迟申明属性 一般可用于注解后申明的如ButterKnife
     lateinit var a: String
@@ -45,6 +48,7 @@ class KotlinX {
 
         //使用{} 括起来的字符串模板
         val s2 = "${s1.replace("is", "was")}, but now is $a"
+
     }
 
     /**

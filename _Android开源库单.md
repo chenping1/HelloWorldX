@@ -326,6 +326,8 @@
 *   [material-ripple](https://github.com/balysv/material-ripple) 水波纹效果（2019-04-02）
 *   [AndroidPileLayout](https://github.com/xmuSistone/AndroidPileLayout) 卡片式布局（2019-06-24）
 *   [ChatKit](https://github.com/stfalcon-studio/ChatKit) 聊天布局 （2019-06-24）
+*   [BackgroundLibrary](https://github.com/JavaNoober/BackgroundLibrary)  替换drawable xml 布局
+
 
 ### 整套UI 方案
 *   [XUI](https://github.com/xuexiangjys/XUI) 一整套UI的整体解决方案

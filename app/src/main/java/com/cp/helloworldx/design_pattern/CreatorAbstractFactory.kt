@@ -28,7 +28,7 @@ public class CreatorAbstractFactory {
         creator1.createProductB().doSomething();
 
 
-        val creator2 = Creator1()
+        val creator2 = Creator2()
         creator2.createProductA().doSomething();
         creator2.createProductB().doSomething();
     }

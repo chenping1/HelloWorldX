@@ -2,6 +2,7 @@ package com.cp.helloworldx.design_pattern
 
 /**
  *  观察者模式
+ *  说明: 多个观察者监听同一主题对象， 当主体对象状态更新会通知所有观察者 使他能够自动更新自己
  *  使用list 存储  观察者接口， 需要再通知
  */
 public class BehaviorObserverPattern {

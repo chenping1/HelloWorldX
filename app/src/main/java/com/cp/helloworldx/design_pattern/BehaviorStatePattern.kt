@@ -1,7 +1,9 @@
 package com.cp.helloworldx.design_pattern
 
 /**
- * 行为型模式-- 状态模式——优化登录操作
+ * 状态模式-- 状态模式——优化登录操作
+ * 说明: 运行一个对象在内部状态改变的时候改变其行为
+ * 场景: 分离对象的状态与行为
  * 此模式最关键的地方在于不同状态下对同一行为有不同的实现,适用的情况应该是用于有限状态机的设计上
  * 1. 定义接口
  * 2.不同实现类去实现这个接口
@@ -9,7 +11,7 @@ package com.cp.helloworldx.design_pattern
  * 4. 定义操作类， 包含变量:以接口函数为类型    函数: 1. 赋值变量 到底是哪个实现类  2.接口的操作方法
  *
  */
-public class BehaviourStatePattern {
+public class BehaviorStatePattern {
 
 
     fun main(){

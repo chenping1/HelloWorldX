@@ -1,9 +1,6 @@
 package com.cp.helloworldx.kotlin
 
 import kotlinx.coroutines.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
@@ -15,7 +12,7 @@ import kotlin.coroutines.suspendCoroutine
  *      2. 不需要线程锁机制 因为只有一个线程 不存在写变量冲突
  */
 class KotlinCoroutine {
-
+    //viewModelScope
     suspend fun create(){
         //不阻碍线程
         GlobalScope.launch {
@@ -37,21 +34,21 @@ class KotlinCoroutine {
     }
 
 
-    private suspend fun <T> Call<T>.await(): T {
-        return suspendCoroutine { continuation ->
-            enqueue(object : Callback<T> {
-                override fun onFailure(call: Call<T>, t: Throwable) {
-                    continuation.resumeWithException(t)
-                }
-
-                override fun onResponse(call: Call<T>, response: Response<T>) {
-                    val body = response.body()
-                    if (body != null) continuation.resume(body)
-                    else continuation.resumeWithException(RuntimeException("response body is null"))
-                }
-            })
-        }
-    }
+//    private suspend fun <T> Call<T>.await(): T {
+//        return suspendCoroutine { continuation ->
+//            enqueue(object : Callback<T> {
+//                override fun onFailure(call: Call<T>, t: Throwable) {
+//                    continuation.resumeWithException(t)
+//                }
+//
+//                override fun onResponse(call: Call<T>, response: Response<T>) {
+//                    val body = response.body()
+//                    if (body != null) continuation.resume(body)
+//                    else continuation.resumeWithException(RuntimeException("response body is null"))
+//                }
+//            })
+//        }
+//    }
 
     fun test(){
 

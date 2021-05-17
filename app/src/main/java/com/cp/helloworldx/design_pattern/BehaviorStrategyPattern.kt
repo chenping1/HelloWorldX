@@ -4,6 +4,7 @@ package com.cp.helloworldx.design_pattern
 /**
  * 行为模式--策略模式
  * 策略模式定义了一系列的算法，并将每一个算法封装起来，使他们可以相互替换
+ * 场景: 消除各种if else分支判断  解耦策略的定义、创建、使用
  */
 public class BehaviorStrategyPattern {
 

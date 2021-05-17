@@ -2,10 +2,11 @@ package com.cp.helloworldx.design_pattern
 
 /**
  * 责任链模式
- * 将多个对象通过引用连接起来形成一条链。请求在这个链上传递，直到链上的某一个对象决定处理此请求。
+ * 说明: 将多个对象通过引用连接起来形成一条链。请求在这个链上传递，直到链上的某一个对象决定处理此请求。
+ * 场景: 解耦请求的发送者和接受者
  * 对于客户来说并不知道请求在哪一个环节被处理了。从而实现了请求和处理之间的解耦合。
  */
-public class BehaviourChainOfResponsibilityPattern {
+public class BehaviorChainOfResponsibilityPattern {
 
 
     public fun test() {
