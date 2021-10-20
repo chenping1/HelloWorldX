@@ -155,7 +155,7 @@
 *   [SuperCalendar](https://github.com/MagicMashRoom/SuperCalendar)  自定义日历控件 支持左右无限滑动 周月切换 标记日期显示 自定义显示效果跳转到指定日期（2019-04-02）
 *   [NCalendar](https://github.com/yannecer/NCalendar) 一款安卓日历，仿miui，钉钉，华为的日历，万年历、365、周日历，月日历，月视图、周视图滑动切换，农历，节气，Andriod Calendar , MIUI Calendar,小米日历（2019-06-20）
 
-##### Webview
+##### WebView
 
 *   [AgentWeb](https://github.com/Justson/AgentWeb)
 *   [VasSonic](https://github.com/Tencent/VasSonic) 首屏加载速度快
@@ -267,6 +267,7 @@
 #### 加载 空数据
 *   [LoadSir](https://github.com/KingJA/LoadSir) 如加载中，加载失败，无数据，网络超时，如占位图，登录失效等常用页面
 *   [ LoadingAndRetryManager]( https://github.com/hongyangAndroid/LoadingAndRetryManager) 如加载中，加载失败，无数据，网络超时，如占位图，登录失效等常用页面
+*   [](https://github.com/Zhao-Yan-Yan/MultiStatePage) 缺省页的正确打开方式 高度解耦、低侵入、易拓展 多状态视图状态切换器
 
 ##### 新手引导
 
@@ -513,7 +514,9 @@
 *   [wcdb](https://github.com/Tencent/wcdb) 一个高效、完整、易用的移动数据库框架，基于[SQLCipher](https://github.com/sqlcipher/sqlcipher)，支持iOS, macOS和Android。
 *   [Android-Debug-Database](https://github.com/amitshekhariitbhu/Android-Debug-Database) 数据库调试工具
 
-
+#### 支付
+*   [
+IJPay](https://github.com/Javen205/IJPay)封装了微信支付、QQ支付、支付宝支付、京东支付、银联支付、PayPal 支付等常用的支付方式以及各种常用的接口
 
 #### 通讯
 *   [NettyChat](https://github.com/FreddyChen/NettyChat) 基于Netty+TCP+Protobuf实现的Android IM库，包含Protobuf序列化、TCP拆包与粘包、长连接握手认证、心跳机制、断线重连机制、消息重发机制、读写超时机制、离线消息、线程池等功能。
@@ -593,7 +596,7 @@
 *   [dagger](https://github.com/square/dagger) 依赖注入，适用于 Android 和 Java
 
 ##### 日志
-
+*   [timber](https://github.com/JakeWharton/timber) JakeWharton 日志
 *   [logger](https://github.com/orhanobut/logger)
 *   [ALog](https://github.com/Blankj/ALog)（2019-06-24）
 
@@ -655,7 +658,7 @@
 *   [BluetoothHelper](https://github.com/a-voyager/BluetoothHelper) （2019-06-24）
 
 ##### 测试
-
+*   [booster](https://booster.johnsonlee.io/preface/overview.html#什么是-booster-？)为移动应用设计的易用、轻量级且可扩展的质量优化框架，其目标主要是为了解决随着 APP 复杂度的提升而带来的性能、稳定性、包体积等一系列质量问题
 *   [Matrix](https://github.com/Tencent/matrix) 通过各种性能监控方案，对性能监控项的异常数据进行采集和分析，输出相应的问题分析、定位与优化建议，从而帮助开发者开发出更高质量的应用。
 *   [pandora](https://github.com/whataa/pandora) 一款无需ROOT、可以直接在应用内查看和修改包括网络、数据库、UI等的工具箱，适合开发和测试阶段的各种问题的快速定位。
 *   [ArgusAPM](https://github.com/Qihoo360/ArgusAPM) 。ArgusAPM是360移动端产品使用的可视化性能监控平台，为移动端APP提供性能监控与管理，可以迅速发现和定位各类APP性能和使用问题，帮助APP不断的提升用户体验。（2019-03-27）
@@ -663,6 +666,7 @@
 *   [UETool](https://github.com/eleme/UETool) 一个各方人员（设计师、程序员、测试）都可以使用的调试工具。它可以作用于任何显示在屏幕上的 view，比如 Activity/Fragment/Dialog/PopupWindow 等等。（2019-03-27）
 *   [robolectric](https://github.com/robolectric/robolectric) 单元测试 （2019-03-29）
 *   [AppMethodOrder](https://github.com/zjw-swun/AppMethodOrder) 无需侵入式代码,让你了解所有函数调用顺序以及函数耗时的Android库 （2019-04-02）
+
 
 ##### 传感器
 

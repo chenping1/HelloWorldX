@@ -1,11 +1,13 @@
 package com.cp.helloworldx.kotlin
 
 import android.content.Context
+import android.view.View
 import android.widget.Toast
 
 class KotlinX {
     //延迟申明属性 一般可用于注解后申明的如ButterKnife
     lateinit var a: String
+
 
     fun nullX() {
 
@@ -22,6 +24,9 @@ class KotlinX {
         //一个小知识点,当列表为空时赋值0
         val nameList: MutableList<String>? = null
         val size = nameList?.size ?: 0
+
+        // 如果该值或其转换结果为空，那么返回 defaultValue。
+        val mapped = name?.let { it.replace("sss","") } ?: "sa"
     }
 
     /**
@@ -63,9 +68,15 @@ class KotlinX {
         for (item in items) {
 
         }
+
+        //检测元素是否在集合中
+        if("2222" in items){
+        }
     }
 
+    fun <T> getName(t : T){
 
+    }
 
     /**
      * 集合类  List Map
@@ -82,7 +93,7 @@ class KotlinX {
 
         //lambda
         item1
-                .filter { it.startsWith("a") }
+                .filter {it -> it.startsWith("a") }
                 .sortedBy { it } //按字母排序
                 .map { it.toUpperCase() }
                 .forEach { it } //遍历集合
@@ -91,6 +102,10 @@ class KotlinX {
 
         map.getValue("11")//直接通过getValue获取,如果key 没有会报错
         map.getOrElse("11", { "ss" })//直接通过getValue获取,如果key 没有会报错
+
+        for((k,v) in map){
+            println("$k->$v")
+        }
     }
 
     /**
@@ -131,11 +146,11 @@ class KotlinX {
         //}
 
         //       2. 多级判空
-        //mSectionMetaData?.apply{//mSectionMetaData不为空的时候操作mSectionMetaData
-        //}?.questionnaire?.apply{ //questionnaire不为空的时候操作questionnaire
-        //}?.section?.apply{//section不为空的时候操作section
-        //}?.sectionArticle?.apply{//sectionArticle不为空的时候操作sectionArticle
-        //}
+//        mSectionMetaData?.apply{//mSectionMetaData不为空的时候操作mSectionMetaData
+//        }?.questionnaire?.apply{ //questionnaire不为空的时候操作questionnaire
+//        }?.section?.apply{//section不为空的时候操作section
+//        }?.sectionArticle?.apply{//sectionArticle不为空的时候操作sectionArticle
+//        }
 
         //also
         //和let 相似 ，返回值是本身  用于函数多个扩展函数链式调用
@@ -188,7 +203,6 @@ class KotlinX {
             C.testC()
         }
     }
-
 
     open class BaseX(name: String) {
 

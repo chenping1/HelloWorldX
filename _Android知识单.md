@@ -1,5 +1,4 @@
-项目内容
-
+#  Android 知识单
 
 ## 四大组件
 ### activity生命周期
@@ -65,8 +64,6 @@ Activity负责用户界面交互和显示 Service负责后台处理 Intent是四
 4. 从Activity切换到另外Activity
 5. 屏幕切换
 
-
-
 ## View 相关
 ### view和viewgroup理解
 Android 中所以UI类都是建立在View 和 ViewGroup中的，所有view的子类为widget 所有viewgroup子类为layout, Viewgroup作为布局容器最上层
@@ -78,7 +75,7 @@ Android 中所以UI类都是建立在View 和 ViewGroup中的，所有view的子
 - 应用自定义属性
 - 添加事件
 
-### androidtouchevent事件分发机制
+### android Touch Event事件分发机制
 必须提到三个函数
 #### dispatchTouchEvent()
 用来分派事件。其中调用了onInterceptTouchEvent()和onTouchEvent()，一般不重写该方法
@@ -100,11 +97,13 @@ Android 中所以UI类都是建立在View 和 ViewGroup中的，所有view的子
 [参考链接](http://www.codekk.com/blogs/detail/54cfab086c4761e5001b253f)
 
 
-### recyleview和listview 两者区别， 为啥listview 还在用
+### recycleView和listview 两者区别， 为啥listview 还在用
 listView内部使用recycleBin 机制
 
 ### ConstraintLayout和RelativeLayout
 对比
+
+
 
 ## 通信
 ### 序列化是什么如何实现的
@@ -121,8 +120,6 @@ listView内部使用recycleBin 机制
 - 使用场景 handler 一般用于延时操作或接收子线程发送的数据， 用此数据配合主线程更新UI。
 - 原理: Looper负责创建MessageQueue 然后无限循环的从MessageQueue中读取 handler发过来的消息
 [参考链接](http://blog.csdn.net/lmj623565791/article/details/38377229)
-
-
 
 ### binder机制原理
 Binner 是Android进程间通信机制， 客户端和服务端进行通信的媒介
@@ -144,21 +141,9 @@ Binner 是Android进程间通信机制， 客户端和服务端进行通信的�
 4. 在AndroidManifest.xml文件中配置AIDL服务
 5. 客户端 通过bindService 绑定服务，调用服务方法
 
+---
 
-### android跨进程通讯的几种方式
-1. 通过Intent访问其他应用程序Activity
-2. Content Provider  访问系统相册
-3. 广播
-4. AIDL 服务
-
-## 进程相关
-### 有没有用过线程池  大概讲一下(重点)
-
-
-### handlerthread和thread差别
-hanlderThread 是 thread的子类， 它自带Looper 可以通过消息队列来重复使用当前线程， 每个任务都是逐个执行的， 如果某个任务执行时间长就会导致后续任务延迟处理
-
-
+## 进程和线程相关
 ### android程序如何使用多进程
 android 程序所有组件都在一个进程中执行的，改进程的名字就是程序的包名。同时android允许将一些组件在其他进程中执行。四大组件均支持androd:process属性， 可以设置该属性的名字 将组件运行在指定的进程
 - 为什么使用多进程
@@ -184,35 +169,84 @@ android 程序所有组件都在一个进程中执行的，改进程的名字就
 ### 空进程
 这些进程内部没有东西运行 保留进程目的是为了下次更快启动
 
+### android跨进程通讯的几种方式
+1. 通过Intent访问其他应用程序Activity
+2. Content Provider  访问系统相册
+3. 广播
+4. AIDL 服务
 
+### 线程相关
+### handlerthread和thread差别
+hanlderThread 是 thread的子类， 它自带Looper 可以通过消息队列来重复使用当前线程， 每个任务都是逐个执行的， 如果某个任务执行时间长就会导致后续任务延迟处理
 
-### asyncTask相关
-##### AsynTask内部实行 使用场景
-内部是通过Handler 机制来完成，Android提供执行框架来提供线程池执行相关任务，因为线程池的大小问题 只能执行耗时短的任务如http请求对于大规模下载不适用AysncTask会造成线程池堵塞 发现AysncTask执行不了
+### 有没有用过线程池  大概讲一下(重点)
+
+### AsyncTask相关
+##### AsyncTask内部实行 使用场景
+内部是通过Handler 机制来完成，Android提供执行框架来提供线程池执行相关任务，
+因为线程池的大小问题 只能执行耗时短的任务如http请求对于大规模下载不适用AsyncTask会造成线程池堵塞 发现AsyncTask执行不了
 ##### 1.AsynTask为什么要设计为只能够一次任务？
  最核心的还是线程安全问题，多个子线程同时运行，会产生状态不一致的问题。所以要务必保证只能够执行一次
 
- ##### 2.AsynTask造成的内存泄露的问题怎么解决
- 比如非静态内部类AsynTask会隐式地持有外部类的引用，如果其生命周期大于外部activity的生命周期，就会出现内存泄漏注意要复写AsynTask的onCancel方法，把里面的socket，file等，该关掉的要及时关掉在 Activity 的onDestory()方法中调用Asyntask.cancal方法Asyntask内部使用弱引用的方式来持有Activity
+#####  2.AsyncTask造成的内存泄露的问题怎么解决
+ 比如非静态内部类AsyncTask会隐式地持有外部类的引用，如果其生命周期大于外部activity的生命周期，就会出现内存泄漏注意要复写AsyncTask的onCancel方法，  
+ 把里面的socket，file等，该关掉的要及时关掉在 Activity 的onDestory()方法中调用AsyncTask.cancel方法AsyncTask内部使用弱引用的方式来持有Activity
 
- ##### 3. 若Activity已经销毁，此时AsynTask执行完并且返回结果，会报异常吗?
- 当一个App旋转时，整个Activity会被销毁和重建。当Activity重启时，AsyncTask中对该Activity的引用是无效的，因此onPostExecute()就不会起作用，若AsynTask正在执行，折会报 view not attached to window manager 异常同样也是生命周期的问题，在 Activity 的onDestory()方法中调用Asyntask.cancal方法，让二者的生命周期同步
+##### 3. 若Activity已经销毁，此时AsyncTask执行完并且返回结果，会报异常吗?
+ 当一个App旋转时，整个Activity会被销毁和重建。当Activity重启时，AsyncTask中对该Activity的引用是无效的，  
+ 因此onPostExecute()就不会起作用，若AsynTask正在执行，折会报 view not attached to window manager 异常同样也是生命周期的问题，  
+ 在 Activity 的onDestory()方法中调用Asyntask.cancal方法，让二者的生命周期同步
 
- ##### 4. Activity销毁但Task如果没有销毁掉，当Activity重启时这个AsyncTask该如何解决？
+##### 4. Activity销毁但Task如果没有销毁掉，当Activity重启时这个AsyncTask该如何解决？
 还是屏幕旋转这个例子，在重建Activity的时候，会回掉Activity.onRetainNonConfigurationInstance()重新传递一个新的对象给AsyncTask，完成引用的更新
 
+#### Service WorkManager AlarmManager
+1. Service 需要立即执行 并且必须执行完毕 (在8.0之后要通过startForegroundService 在service里面绑定一个不可关闭通知向用户显示)
+2. WorkManager  适用于应用退出程序也能保证任务正常 运行, 不适用立即执行和特定时间触发(靠系统 有些系统不允许在后台运行)
+3. AlarmManager 适用于特定时间触发
 
-## 其他
+### 开启子线程的方法
+1. RXJava线程池
+2. Kotlin 协程
+3. Thread AsyncTask 线程池
+
+### 线程池
+```
+        executor = new ThreadPoolExecutor(
+                corePoolSize, //当某个核心任务执行完毕，会依次从缓冲队列中取出等待任务
+                maximumPoolSize, //5,先corePoolSize,然后new LinkedBlockingQueue<Runnable>(),然后maximumPoolSize,但是它的数量是包含了corePoolSize的
+                keepAliveTime, //表示的是maximumPoolSize当中等待任务的存活时间
+                unit,
+                new LinkedBlockingQueue<Runnable>(), //缓冲队列，用于存放等待任务，Linked的先进先出
+                Executors.defaultThreadFactory(), //创建线程的工厂
+                new ThreadPoolExecutor.AbortPolicy() //用来对超出maximumPoolSize的任务的处理策略
+```
+
+####  线程池优点
+1. 线程池中线程可重用, 避免创建和销毁带来的性能损耗
+2. 能控制线程的最大并发数, 避免大量线程之间互相抢占系统资源 导致祖塞
+3. 能够对线程进行 管理, 并提供定时执行及指定间隔循环执行等功能
+
+#### 线程池核心实现为ThreadPoolExecutor, 核心构造方法
+1. corePoolSize  线程核心线程数 默认情况 核心线程一直存活
+2. maxmumpoolSize 线程池最大线程数  达到这个数值后 后面的任务会阻塞
+3. keepAliveTime 非核心线程闲置时间
+4. unit keepAliveTime的时间单位
+5. workQueue 线程池任务队列, 存储提交的runable对象
+6. threadFactory 线程工厂 为线程池创建新线程
+
+#### 线程池分类
+1. FixedThreadPool  线程数量固定且都是核心线程  核心线程不会回收快速响应外界请求 没有超时机制任务队列没有大小限制
+2. CachedThreadPool  没有核心线程 最大线程无限大 超时后就会被回收  适合执行大量 耗时较少任务
+3. ScheduledThreadPool 核心线程规定 非核心线程无限大   适合执行 定时任务和固定周期的重复任务 唯一有延迟执行和周期重复执行能力 主要处理任务队列延迟工作
+4. SingleThreadExecutor  只有一个核心线程所有任务在一个线程池中按顺序执行
+
+#### 用线程池线程数量 经验值是这样
+程池的大小经验值应该这样设置：（其中N为CPU的核数）如果是CPU密集型应用，则线程池大小设置为N+1
+如果是IO密集型应用，则线程池大小设置为2N+1
 
 
-### jni调用
-JNI 全称是Java Native Interface(Java 本地接口)是一层接口，用来沟通java代码和C/C++ 之间的。 使两者可以互相调用、
-Java 优点是跨平台 和 操作系统之间通过JVM完成，但一些和操作系统相关的操作无法完成
-加载SO库
-
-### android推送原理
-长连接 + 心跳
-
+---
 
 ## android优化
 
@@ -317,6 +351,19 @@ h.使用webView，在Activity.onDestory需要移除和销毁，webView.removeAll
 ### 图片缓存
 内存缓存 LruCache + 磁盘缓存 DiskLruCache + 网络请求 组成三级缓存
 
+---
+
+## 其他
+
+
+### jni调用
+JNI 全称是Java Native Interface(Java 本地接口)是一层接口，用来沟通java代码和C/C++ 之间的。 使两者可以互相调用、
+Java 优点是跨平台 和 操作系统之间通过JVM完成，但一些和操作系统相关的操作无法完成
+加载SO库
+
+### android推送原理
+长连接 + 心跳
+
 
 ### android系统架构
 Android 系统架构大致分为四层架构 五块区域:
@@ -418,10 +465,6 @@ MVVM: DataBinding
 
 ### rxjava
 RXJava 常用的操作符
-
-#### 用线程池线程数量 经验值是这样
-程池的大小经验值应该这样设置：（其中N为CPU的核数）如果是CPU密集型应用，则线程池大小设置为N+1
-如果是IO密集型应用，则线程池大小设置为2N+1
 
 
 https://github.com/leavesC/ReactiveHttp
