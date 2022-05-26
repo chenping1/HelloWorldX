@@ -1,61 +1,58 @@
 package com.cp.helloworldx.kotlin
 
-import android.content.Context
-import android.view.View
-import android.widget.Toast
+object KotlinBaseX {
+    //Kotlin基础 https://juejin.cn/post/6942251919662383134
 
-class KotlinX {
-    //延迟申明属性 一般可用于注解后申明的如ButterKnife
-    lateinit var a: String
+    fun String?.toEmptyString(): String {
+        return if (this.isNullOrEmpty()) "" else this
+    }
+    fun List<String>?.toSeparatorString() : String{
+        return this?.joinToString(",").toEmptyString()
+    }
+    @JvmStatic
+    fun main(args: Array<String>) {
+        var list = mutableListOf<String>("1","2")
 
+        println(list.toSeparatorString())
+    }
 
-    fun nullX() {
-
+    fun BaseX() {
         var b: String? = "abc"
-        b?.length //如果b为null，返回null，否则返回b.length
-        b!!.length //如果b为null，抛出空指针异常，否则返回b.length
-        var c = b!! //b为空 报错
-        var d = b ?: "2"
-
-
-        var name: String? = ""
-        var people: String = name!!
-
-        //一个小知识点,当列表为空时赋值0
-        val nameList: MutableList<String>? = null
-        val size = nameList?.size ?: 0
-
+        var d = b ?: "2"  //b 为空 则赋值默认值
         // 如果该值或其转换结果为空，那么返回 defaultValue。
-        val mapped = name?.let { it.replace("sss","") } ?: "sa"
-    }
+        val mapped = b?.let { b.replace("sss", "") } ?: "sa"
 
-    /**
-     * 类型转换 类型判断
-     */
-    fun typeX(obj: Any) {
-        //类型检测
-        if (obj is String) {
-            obj.length
-        }
-
-        //安全类型转换 如果obj 为Int 则转成int 不是则为null
-        val aInt: Int? = obj as? Int
-    }
-
-
-    /**
-     * 字符串类
-     */
-    fun stringX() {
+        //字符串
         val a = 1
-
         val s1 = "a = $a"
-
         //使用{} 括起来的字符串模板
         val s2 = "${s1.replace("is", "was")}, but now is $a"
 
+
+        //类型转换
+        var obj: Any = "aaa"
+        if (obj is String) { //判断类型 相当于instance of
+            obj.length
+        }
+        //安全类型转换 如果obj 为Int 则转成int 不是则为null
+        val aInt: Int? = obj as? Int
+
+        //常量 const 只能定义在 object, companion object , 顶层函数里
+
+        //序列化
+        /*dataList = Gson().fromJson(GsonUtils.toJson(originDataList),
+            object : TypeToken<MutableList<RelationShipBillVO>?>() {}.type
+        )*/
     }
 
+    /**
+     * 函数
+     * 1. 带默认值的 函数， 如果参数是默认值 可以省略
+     * 2. @JvmStatic 和 顶层方法 是java 中静态方法， object和companion object 里面的方法不是真正静态的
+     */
+    fun defaultParamFunX(paramsA: String = "aaa", paramsB: String = "aaa"){
+        println(paramsA)
+    }
     /**
      * 扩展函数
      */
@@ -63,50 +60,11 @@ class KotlinX {
         return if (this.isNullOrEmpty()) "-" else this
     }
 
-    fun forWhenX() {
-        val items = listOf("apple")
-        for (item in items) {
 
-        }
-
-        //检测元素是否在集合中
-        if("2222" in items){
-        }
-    }
-
-    fun <T> getName(t : T){
+    fun <T> getName(t: T) {
 
     }
 
-    /**
-     * 集合类  List Map
-     */
-    fun collectionX() {
-        val item1 = listOf<String>()
-        val list = listOf("apple")
-
-        var item = list.take(2)  //取前两个List的值
-        var item2 = list.takeLast(2) //取后两个list的值
-
-        val mutableList = mutableListOf<String>()
-
-
-        //lambda
-        item1
-                .filter {it -> it.startsWith("a") }
-                .sortedBy { it } //按字母排序
-                .map { it.toUpperCase() }
-                .forEach { it } //遍历集合
-
-        val map = mutableMapOf<String, String>()
-
-        map.getValue("11")//直接通过getValue获取,如果key 没有会报错
-        map.getOrElse("11", { "ss" })//直接通过getValue获取,如果key 没有会报错
-
-        for((k,v) in map){
-            println("$k->$v")
-        }
-    }
 
     /**
      * let 适用于处理不为null的操作场景
@@ -167,67 +125,70 @@ class KotlinX {
      */
     class ClassX(val name: String) : BaseX(name) { //参数就是构造函数   //继承必须显示的传递构造函数
 
+        //相当于java 静态方法 外界直接通过 ClassX.TAG 调用
+        companion object{
+            val TAG = "companion object"
+        }
+
         //1 次构造函数必须通过this委托给主构造
         //2 次构造函数 里面的内容 在 init 之后调用
         constructor(name: String, age: String) : this(name) {
-
         }
-
 
         //实例化的时候 init 和 类里的申明 按照代码顺序执行 init 可以有多个
         init {
             val hello = name
         }
 
-        init {
-
-        }
-
         fun testA() {
-            var test = name
+
         }
 
         fun testB() {
             var test = name
         }
 
-        fun testC(){
+        fun testC() {
             //匿名内部类object :
-            object : A{
+            val imple = object : A {
                 override fun testA() {
-                    TODO("Not yet implemented")
+                    println("sss")
                 }
+            }
+            imple.testA()
 
+            //对比上面的 函数式lambda 表达式
+            val impleB = B{
+                println("sss")
             }
 
-            C.testC()
+        }
+
+
+        /**
+         * 中缀表达式
+         * 1、必须是成员函数或扩展函数
+            2、必须只有一个参数
+            3、参数不可能是可变参数或默认参数
+         */
+        infix fun hello(name:String){
+            println(name)
         }
     }
 
     open class BaseX(name: String) {
 
     }
-
-
-    /**--------------****/
-    interface A{
-        fun  testA()
+    interface A {
+        fun testA()
     }
 
     /**
-     * 单例
+     * 只有一个抽象方法  函数函数式接口 ， 注意前面有个fun
      */
-    object C{
-        fun testC(){
-
-        }
+    fun interface B{
+        fun testA()
     }
 
-    // 实例话
-    companion object {
-        @JvmStatic
-        fun newInstance(): ClassX {
-            return ClassX("A")
-        }
-    }
 }
+

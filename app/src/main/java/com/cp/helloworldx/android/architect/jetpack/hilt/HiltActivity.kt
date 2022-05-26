@@ -13,7 +13,6 @@ import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.components.ServiceComponent
 import javax.inject.Inject
 
-@AndroidEntryPoint
 class HiltActivity : AppCompatActivity() {
 
     @Inject
@@ -56,14 +55,5 @@ abstract class AnalyticsModule {
 
 
 
-@Module
-@InstallIn(ActivityComponent::class)
-object AnalyticsModule{
-
-    @Provides
-    fun provideAnalyticsService():AnalyticsService{
-        return AnalyticsServiceImpl()
-    }
-}
 
 

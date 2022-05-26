@@ -211,8 +211,6 @@
 
 *   [retrofit](https://github.com/square/retrofit)
 *   [okhttp](https://github.com/square/okhttp)
-*   [okhttp-OkGo](https://github.com/jeasonlzy/okhttp-OkGo) 封装了 OkHttp 的网络请求框架
-*   {`停止维护`} [okhttputils](https://github.com/hongyangAndroid/okhttputils) okhttp的辅助类
 *   [NoHttp](https://github.com/yanzhenjie/NoHttp) 实现Http标准协议框架，支持多种缓存模式，底层可动态切换OkHttp、URLConnection。
 *   [xUtils3](https://github.com/wyouflf/xUtils3) xUtils 包含了orm, http(s), image, view注解
 *   [afinal](https://github.com/yangfuhai/afinal) Afinal是一个android的ioc，orm框架，内置了四大模块功能：FinalAcitivity,FinalBitmap,FinalDb,FinalHttp
@@ -431,7 +429,7 @@
 *   [blurkit-android](https://github.com/CameraKit/blurkit-android) 图片模糊（2019-04-02）
 
 ##### 图片加载
-
+*   [coil](https://github.com/coil-kt/coil/)
 *   [glide](https://github.com/bumptech/glide)
 *   [glide-transformations](https://github.com/wasabeef/glide-transformations) 基于glide 的图片变化库
 *   [fresco](https://github.com/facebook/fresco)
@@ -501,6 +499,7 @@
 *   [BGAQRCode-Android](https://github.com/bingoogolapple/BGAQRCode-Android) 扫描二维码、扫描条形码、
 *   [QrCodeScan](https://github.com/chentao0707/QrCodeScan) 二维码扫描
 *   [android-zxingLibrary](https://github.com/yipianfengye/android-zxingLibrary) 几行代码快速集成二维码扫描功能
+*   [barcode-scanning](https://developers.google.cn/ml-kit/vision/barcode-scanning/android)
 
 ##### 数据库
 
@@ -687,7 +686,7 @@ IJPay](https://github.com/Javen205/IJPay)封装了微信支付、QQ支付、支�
 *   [Android-Iconics](https://github.com/mikepenz/Android-Iconics) 图标
 *   [AndroidPdfViewer](https://github.com/barteksc/AndroidPdfViewer) pdf 加载
 *   [android-job](https://github.com/evernote/android-job) 用于后台运行延迟的作业
-*   [smartTable](https://github.com/huangyanbin/smartTable) 自动生成表格框架（2019-03-27）
+*   [smartTable](https://github.com/huangyanbin/smartTable) 自动生成表格框架（https://juejin.cn/post/6844903549109813255#heading-0）
 *   [k-9](https://github.com/k9mail/k-9) 邮箱（2019-03-29）
 *   [FloatWindow](https://github.com/yhaolpz/FloatWindow) 全局悬浮窗，只是好久没有更新了（2019-04-18）
 *   [PreLoader](https://github.com/luckybilly/PreLoader)预加载：页面启动速度优化利器（2019-06-24）

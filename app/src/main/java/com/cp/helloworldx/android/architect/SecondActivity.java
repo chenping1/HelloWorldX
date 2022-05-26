@@ -13,6 +13,9 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.cp.helloworldx.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SecondActivity extends AppCompatActivity {
 
 
@@ -20,6 +23,8 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        ArrayList<String>  aa = new ArrayList<>();
+        getIntent().putStringArrayListExtra("key",  aa);
         setContentView(R.layout.main_activity);
                 AppViewModel appViewModel =  ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(AppViewModel.class);
         ((TextView)findViewById(R.id.tv_title)).setText("value = "+appViewModel.index);
